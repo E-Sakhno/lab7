@@ -8,6 +8,7 @@ if __name__ == '__main__':
     # Заменить символы конца предложения.
     text = text.replace("!", ".")
     text = text.replace("?", ".")
+    text = text.replace(",\n", ".\n")  # замена запятой в конце предложения
 
     # Удалить все многоточия.
     while ".." in text:
