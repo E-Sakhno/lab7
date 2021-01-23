@@ -35,30 +35,30 @@ if __name__ == '__main__':
         elif command == 'list':
             # Заголовок таблицы.
             line = '+-{}-+-{}-+-{}-+-{}-+'.format(
-            '-' * 4,
-            '-' * 30,
-            '-' * 20,
-            '-' * 8
+                '-' * 4,
+                '-' * 30,
+                '-' * 20,
+                '-' * 8
             )
             print(line)
             print(
-            '| {:^4} | {:^30} | {:^20} | {:^8} |'.format(
-            "№",
-            "Ф.И.О.",
-            "Должность",
-            "Год"
-            )
+                '| {:^4} | {:^30} | {:^20} | {:^8} |'.format(
+                    "№",
+                    "Ф.И.О.",
+                    "Должность",
+                    "Год"
+                )
             )
             print(line)
             # Вывести данные о всех сотрудниках.
             for idx, worker in enumerate(workers, 1):
                 print(
-                '| {:>4} | {:<30} | {:<20} | {:>8} |'.format(
-                idx,
-                worker.get('name', ''),
-                worker.get('post', ''),
-                worker.get('year', 0)
-                )
+                    '| {:>4} | {:<30} | {:<20} | {:>8} |'.format(
+                        idx,
+                        worker.get('name', ''),
+                        worker.get('post', ''),
+                        worker.get('year', 0)
+                    )
                 )
             print(line)
 
@@ -76,7 +76,7 @@ if __name__ == '__main__':
                 if today.year - worker.get('year', today.year) >= period:
                     count += 1
                     print(
-                    '{:>4}: {}'.format(count, worker.get('name', ''))
+                        '{:>4}: {}'.format(count, worker.get('name', ''))
                     )
             # Если счетчик равен 0, то работники не найдены.
             if count == 0:
@@ -106,9 +106,6 @@ if __name__ == '__main__':
             print("select <стаж> - запросить работников со стажем;")
             print("help - отобразить справку;")
             print("exit - завершить работу с программой.")
+        
         else:
             print(f"Неизвестная команда {command}", file=sys.stderr)
-
-
-
-
