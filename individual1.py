@@ -10,7 +10,7 @@ if __name__ == '__main__':
     quote = []
     for i in range(0, len(text)):
         if text[i] == '"':
-            quote = quote.append(i)
+            quote.append(i)
     ind = 0
     while ind < len(quote):
         print(text[quote[ind]:quote[ind+1]+1])
